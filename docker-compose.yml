@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   db:
+    container_name: gdd-db
     build: .
     user: root
     environment:
@@ -10,4 +11,4 @@ services:
     ports:
       - "1433:1433"
     volumes:
-      - ./sql_data:/var/opt/mssql/data
+      - ./mssql:/var/opt/mssql/data
